@@ -8,11 +8,6 @@ const user = {
   };
   user.greetDelayed(); 
 
-  /*
-The problem lies in how this works inside the setTimeout callback.
-The regular function inside setTimeout has its own this context,which defaults to the global object or undefined in strict mode.
-Therefore, this.name doesn't refer to the user object but to window.name or throws an error in strict mode.
-*/
 
 //Task 2
 
@@ -27,11 +22,9 @@ const userCorrectedTraditional = {
   };
   userCorrectedTraditional.greetDelayed(); 
   
-/*self holds the reference to the user object, and we access self.name inside the callback instead of this.name. 
-This technique ensures that the callback still refers to the correct user object. */
+
 
 //Task3
-
 
 
 const userCorrectedArrow = {
@@ -43,14 +36,9 @@ const userCorrectedArrow = {
     },
   };
   
-  userCorrectedArrow.greetDelayed(); // Outputs: Hello, Bob!
+  userCorrectedArrow.greetDelayed(); 
   
   
-  /* Arrow functions differ from regular functions because they do not have their own this.
-Instead,they lexically bind thismeaning they inherit this from their surrounding scope.
-Here,this inside the arrow function refers to the same this as the enclosing greetDelayed method—i.e., 
-the userCorrectedArrow object. 
-This makes arrow functions ideal for callbacks where you want to retain the outer this. */
 
 //task 4
 
