@@ -26,3 +26,12 @@ it is because var is function-scoped and setTimeOut functions goes to the final 
 so here i final value will run untill the length of the array and hence there is no elemet in array at index 3 therefore it shows undefined
 so we are fixing it with Immediately Invoked Function Expression (IIFE) itwill consider at at each itration in a new scope
 or we can also use let , it creates a new i for every iteration as let is block scoped
+
+
+SECTION-2
+
+Part-3
+task 1:A closure is basically when a function remembers the variables from where it was created even after that outer function is done running.
+In the setupCounter example,there is a variable count that is declared inside the function. Then we have two inner functions which are increment and decrement. These two dont forget about count they remembers it.
+So every time you call setupCounter(),a new count is created,and the returned object keeps access to it through those inner functions.Even though setupCounter finishes running,the inner functions still keeps track of their own private version of count.
+That’s why counterOne and counterTwo don’t interfere with each other they are independent
