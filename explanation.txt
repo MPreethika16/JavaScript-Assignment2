@@ -1,0 +1,28 @@
+# JavaScript-Assignment2
+
+
+
+PROBLEM 1:
+
+so here we are creating a function named createCounter()
+this function returns another function that incremennts and returns a counter (c) value
+inside createCounter function c is intialized to 0
+and inner function which is incrementCounter function increments the count of the outer function variable
+every time we call the outer function it creates a new count , that means it starts from first
+when we call counterA count variable increments and it is private 
+same goes with counterB
+so here both count variables which is for counterA and counterB are independent they have their own private counters
+we cant access the count diretly from outside as it is private
+this whole scenario explains the concept of closures which are basically functions remembering the scope varaibles which are created inside that scope
+so the code actually works well
+
+
+PROBLEM 2
+
+delayGreeter fucntion loops using var and it also uses setTimeOut function so greet names with delays which is given in ms
+so each name is displayed in console based on the delay like 0s,1s,2s and so on
+but here instead of displaying names it prints Hello,undefined!
+it is because var is function-scoped and setTimeOut functions goes to the final value of i not to the current i value
+so here i final value will run untill the length of the array and hence there is no elemet in array at index 3 therefore it shows undefined
+so we are fixing it with Immediately Invoked Function Expression (IIFE) itwill consider at at each itration in a new scope
+or we can also use let , it creates a new i for every iteration as let is block scoped
