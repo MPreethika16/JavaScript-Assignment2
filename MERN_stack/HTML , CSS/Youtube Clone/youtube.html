@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="videos.css">
+    <link rel="stylesheet" href="sidebar.css">
+
+
+
+    <style>
+        
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+        img{
+            cursor: pointer;
+        }
+        button{
+            cursor: pointer;
+        }
+        body {
+            font-family: Roboto, Arial;
+            margin: 0;
+            padding-top: 80px;
+            padding-left: 96px;
+            padding-right: 24px;
+            background-color: rgb(248, 248, 248);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="left-sec">
+            <img class="hamburger-menu" src="icons/hamburger-menu.svg">
+            <img class="youtube-logo" src="icons/youtube-logo.svg">
+        </div>
+        <div class="middle-sec">
+            <input class="search-bar" type="text" placeholder="Search">
+            <button class="search-button">
+                <img class="search-icon" src="icons/search.svg">
+                <div class="tooltip">Search</div>
+            </button>
+    
+            <button class="voice-search-button">
+                <img class="voice-search-icon" src="icons/voice-search-icon.svg">
+                <div class="tooltip">Search with your voice</div>
+            </button>
+        </div>
+        <div class="right-sec">
+          <div class="upload-icon-container">
+            <img class="upload-icon" src="icons/upload.svg">
+            <div class="tooltip">Create</div>
+          </div>
+
+
+          <div class="youtube-apps-icon-container">
+            <img class="youtube-apps-icon" src="icons/youtube-apps.svg">
+            <div class="tooltip">YouTube Apps</div>
+          </div>
+
+
+          <div class="notifications-icon-container">
+            <img class="notifications-icon" src="icons/notifications.svg">
+            <div class="notifications-count">3</div>
+            <div class="tooltip">Notifications</div>
+          </div>
+
+              
+             
+              <img class="current-user-picture" src="icons/profile-icon.jpeg">
+        </div>
+    </header>
+
+
+
+
+    <nav class="sidebar">
+        <div class="sidebar-link">
+          <img src="icons/home.svg">
+          <div>Home</div>
+        </div>
+        <div class="sidebar-link">
+          <img src="icons/explore.svg">
+          <div>Explore</div>
+        </div>
+        <div class="sidebar-link">
+          <img src="icons/subscriptions.svg">
+          <div>Subscriptions</div>
+        </div>
+        <div class="sidebar-link">
+          <img src="icons/originals.svg">
+          <div>Originals</div>
+        </div>
+        <div class="sidebar-link">
+          <img src="icons/youtube-music.svg">
+          <div>YouTube Music</div>
+        </div>
+        <div class="sidebar-link">
+          <img src="icons/library.svg">
+          <div>Library</div>
+        </div>
+      </nav>
+
+
+    
+    <main>
+        <section class="video-grid">
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail" src="videos-tumbnails/javascript.avif">
+              <div class="video-time">22:15:57</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="channel-icons/simple.jpg">
+              </div>
+              <div class="video-info">
+                <a href="https://www.youtube.com/watch?v=EerdGm-ehJQ&t=50193s" target="_blank" class="video-title-link"></a>
+                <p class="video-title">
+                  JavaScript Tutorial Full Course-Beginner to Pro
+                </p>
+                <p class="video-author">
+                  SuperSimpleDev
+                </p>
+                <p class="video-stats">
+                  4M views &#183; 10 months ago
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail" src="videos-tumbnails/leetcode.jpg">
+              <div class="video-time">7:11</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="channel-icons/channels4_profile.jpg">
+              </div>
+              <div class="video-info">
+                <a href="https://www.youtube.com/watch?v=l0FvnARfGKg" target="_blank" class="video-title-link"></a>
+                <p class="video-title">
+                  THIS Leetcode Strategy Got Me Multiple Big Tech Offers.
+                </p>
+                <p class="video-author">
+                  Maitri Mangal
+                </p>
+                <p class="video-stats">
+                  179K views &#183; 1 month ago
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail" src="videos-tumbnails/okapari.avif">
+              <div class="video-time">6:05</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="channel-icons/okapari-profile.jpg">
+              </div>
+              <div class="video-info">
+                <a href="https://www.youtube.com/watch?v=d042bw4jgmw" target="_blank" class="video-title-link"></a>
+                <p class="video-title">
+                    Kuchipudi 16-Okapari Kokapari.
+                </p>
+                <p class="video-author">
+                    mcyouthfestival
+                </p>
+                <p class="video-stats">
+                  56K views &#183; 11 years ago
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail" src="videos-tumbnails/MasterChef.jpg">
+              <div class="video-time">56:45</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="channel-icons/masterchef-profile.jpg">
+              </div>
+              <div class="video-info">
+                <a href="https://www.youtube.com/watch?v=NAToUi_TqRo&t=34s" target="_blank" class="video-title-link"></a>
+                <p class="video-title">
+                  Best Indian Dishes for World Hindi Day|MasterChef Australia
+                </p>
+                <p class="video-author">
+                    MasterChef Australia
+                </p>
+                <p class="video-stats">
+                  877K views &#183; 1 month ago
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail" src="videos-tumbnails/hq720.avif">
+              <div class="video-time">12:02</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="channel-icons/sathguru.jpg">
+              </div>
+              <div class="video-info">
+                <a href="https://www.youtube.com/watch?v=Yiaatr-Noh0" target="_blank" class="video-title-link"></a>
+                <p class="video-title">
+                  The Power of Begin Alone|Sadhguru Jaggi Vasudev
+                </p>
+                <p class="video-author">
+                  Sadhguru
+                </p>
+                <p class="video-stats">
+                  8M views &#183; 3 years ago
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail" src="videos-tumbnails/indianraga.avif">
+              <div class="video-time">3:50</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="channel-icons/indianRaga-profile.jpg">
+              </div>
+              <div class="video-info">
+                <a href="https://www.youtube.com/watch?v=bXb6PhCmo28" target="_blank" class="video-title-link"></a>
+                <p class="video-title">
+                    Crown (Camilla Cabello) Jathi Mix: Kuchipudi Movement | Indian Classical Dance.
+                </p>
+                <p class="video-author">
+                    IndianRaga
+                </p>
+                <p class="video-stats">
+                  429K views &#183; 6 years ago
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail" src="videos-tumbnails/thumbnail-5.webp">
+              <div class="video-time">11:17</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="channel-icons/channel-5.jpeg">
+              </div>
+              <div class="video-info">
+                <a href="https://www.youtube.com/watch?v=86CQq3pKSUw" target="_blank" class="video-title-link"></a>
+                <p class="video-title">
+                  Kadane's Algorithm to Maximum Sum Subarray Problem
+                </p>
+                <p class="video-author">
+                  CS Dojo
+                </p>
+                <p class="video-stats">
+                  519K views &#183; 5 years ago
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail" src="videos-tumbnails/thumbnail-6.webp">
+              <div class="video-time">19:59</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="channel-icons/channel-6.jpeg">
+              </div>
+              <div class="video-info">
+                <a href="https://www.youtube.com/watch?v=yXWw0_UfSFg" target="_blank" class="video-title-link"></a>
+                <p class="video-title">
+                  Anything You Can Fit In The Circle I’ll Pay For
+                </p>
+                <p class="video-author">
+                  MrBeast
+                </p>
+                <p class="video-stats">
+                  141M views &#183; 1 year ago
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail" src="videos-tumbnails/thumbnail-1.webp">
+              <div class="video-time">14:20</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="channel-icons/channel-1.jpeg">
+              </div>
+              <div class="video-info">
+                <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank" class="video-title-link"></a>
+                <p class="video-title">
+                  Talking Tech and AI with Google CEO Sundar Pichai!
+                </p>
+                <p class="video-author">
+                  Marques Brownlee
+                </p>
+                <p class="video-stats">
+                  3.4M views &#183; 6 months ago
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail" src="videos-tumbnails/thumbnail-2.webp">
+              <div class="video-time">8:22</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="channel-icons/channel-2.jpeg">
+              </div>
+              <div class="video-info">
+                <a href="https://www.youtube.com/watch?v=mP0RAo9SKZk" target="_blank" class="video-title-link"></a>
+                <p class="video-title">
+                  Try Not To Laugh Challenge #9
+                </p>
+                <p class="video-author">
+                  Markiplier
+                </p>
+                <p class="video-stats">
+                  19M views &#183; 4 years ago
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail" src="videos-tumbnails/thumbnail-3.webp">
+              <div class="video-time">9:13</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="channel-icons/channel-3.jpeg">
+              </div>
+              <div class="video-info">
+                <a href="https://www.youtube.com/watch?v=FgjPQQeTh1w" target="_blank" class="video-title-link"></a>
+                <p class="video-title">
+                  Crazy Tik Toks Taken Moments Before DISASTER
+                </p>
+                <p class="video-author">
+                  SSSniperWolf
+                </p>
+                <p class="video-stats">
+                  12M views &#183; 1 year ago
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-preview">
+            <div class="thumbnail-row">
+              <img class="thumbnail" src="videos-tumbnails/thumbnail-4.webp">
+              <div class="video-time">22:09</div>
+            </div>
+            <div class="video-info-grid">
+              <div class="channel-picture">
+                <img class="profile-picture" src="channel-icons/channel-4.jpeg">
+              </div>
+              <div class="video-info">
+                <a href="https://www.youtube.com/watch?v=094y1Z2wpJg" target="_blank" class="video-title-link"></a>
+                <p class="video-title">
+                  The Simplest Math Problem No One Can Solve - Collatz Conjecture
+                </p>
+                <p class="video-author">
+                  Veritasium
+                </p>
+                <p class="video-stats">
+                  18M views &#183; 4 months ago
+                </p>
+              </div>
+            </div>
+          </div>
+  
+        </section>
+      </main>
+</body>
+</html>
