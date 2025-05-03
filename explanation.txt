@@ -1,0 +1,95 @@
+# JavaScript-Assignment2
+
+
+
+PROBLEM 1:
+
+so here we are creating a function named createCounter()
+this function returns another function that incremennts and returns a counter (c) value
+inside createCounter function c is intialized to 0
+and inner function which is incrementCounter function increments the count of the outer function variable
+every time we call the outer function it creates a new count , that means it starts from first
+when we call counterA count variable increments and it is private 
+same goes with counterB
+so here both count variables which is for counterA and counterB are independent they have their own private counters
+we cant access the count diretly from outside as it is private
+this whole scenario explains the concept of closures which are basically functions remembering the scope varaibles which are created inside that scope
+so the code actually works well
+
+
+PROBLEM 2
+
+delayGreeter fucntion loops using var and it also uses setTimeOut function so greet names with delays which is given in ms
+so each name is displayed in console based on the delay like 0s,1s,2s and so on
+but here instead of displaying names it prints Hello,undefined!
+it is because var is function-scoped and setTimeOut functions goes to the final value of i not to the current i value
+so here i final value will run untill the length of the array and hence there is no elemet in array at index 3 therefore it shows undefined
+so we are fixing it with Immediately Invoked Function Expression (IIFE) itwill consider at at each itration in a new scope
+or we can also use let , it creates a new i for every iteration as let is block scoped
+
+
+SECTION-2
+part-1
+
+task2:
+Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their containing scope
+during the compilation phase. 
+However,how variables are hoisted depends on how they are declared.
+Variables declared with var are hoisted and initialized with undefined,meaning they can be accessed before their declaration without causing an error. 
+In contrast, let and const are also hoisted but are not initialized
+they remain in a "temporal dead zone" from the start of the block until their declaration is encountered, leading to a ReferenceError if accessed before initialization. Additionally, const must be initialized at the time of declaration, unlike let.
+
+
+
+part-2
+
+Task1:The problem lies in how this works inside the setTimeout callback.
+The regular function inside setTimeout has its own this context,which defaults to the global object or undefined in strict mode.
+Therefore, this.name doesn't refer to the user object but to window.name or throws an error in strict mode.
+
+TAsk2:
+self holds the reference to the user object, and we access self.name inside the callback instead of this.name. 
+This technique ensures that the callback still refers to the correct user object.
+
+Task3:
+Arrow functions differ from regular functions because they do not have their own this.
+Instead,they lexically bind thismeaning they inherit this from their surrounding scope.
+Here,this inside the arrow function refers to the same this as the enclosing greetDelayed method 
+the userCorrectedArrow object. 
+This makes arrow functions ideal for callbacks where you want to retain the outer this.
+
+
+
+
+
+
+Part-3
+task 1:A closure is basically when a function remembers the variables from where it was created even after that outer function is done running.
+In the setupCounter example,there is a variable count that is declared inside the function. Then we have two inner functions which are increment and decrement. These two dont forget about count they remembers it.
+So every time you call setupCounter(),a new count is created,and the returned object keeps access to it through those inner functions.Even though setupCounter finishes running,the inner functions still keeps track of their own private version of count.
+That’s why counterOne and counterTwo don’t interfere with each other they are independent
+
+
+
+
+part-4
+
+task1:
+If a function is called with fewer arguments than parameters,the missing parameters become undefined.
+If a function is called with more arguments than parameters,the extra arguments are ignored unless the function uses the rest parameter to capture them.
+Functions don’t throw errors for “extra” or “missing” arguments unless explicitly programmed to.
+
+task 2:
+The rest parameter allows you to represent an indefinite number of arguments as an array.
+Syntax:function myFunc(a, b, ...rest) {
+  
+}
+where,
+a and b are named parameters
+rest is an array of any additional arguments
+
+
+
+
+
+
